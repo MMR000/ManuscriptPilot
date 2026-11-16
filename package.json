@@ -1,0 +1,32 @@
+{
+  "name": "manuscriptpilot",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "build:pages": "bash scripts/build-pages.sh"
+  },
+  "dependencies": {
+    "diff": "^9.0.0",
+    "docx": "^9.15.4",
+    "lucide-react": "^1.73.0",
+    "mammoth": "^1.13.0",
+    "next": "^16.4.6",
+    "pdfjs-dist": "^5.5.207",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.12"
+  }
+}
