@@ -1,6 +1,6 @@
 # Public demo deployment
 
-GitHub Pages is configured to publish the `gh-pages` branch. The static build removes the server API and hides live AI controls. Build with `npm run build:pages`, then publish the contents of `out` to `gh-pages`; the optional Actions workflow can automate this if GitHub Actions is available. The project also supports a standard server deployment on Vercel:
+The primary public demo is [manuscript-pilot.vercel.app](https://manuscript-pilot.vercel.app/). It was tested without a reviewer account or API key. The repository supports a standard server deployment on Vercel:
 
 1. Sign in to Vercel and import the existing public GitHub repository `MMR000/ManuscriptPilot`. Grant Vercel access to that repository when prompted. Do not commit `.env.local` or real manuscripts.
 2. Select the Hobby account, choose the Next.js framework, leave the root directory at the repository root, and use Node.js 22. Use `npm ci` and `npm run build` (the framework defaults are normally sufficient). Disable deployment protection if it would require visitors to log in.

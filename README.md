@@ -16,7 +16,7 @@ These screenshots are captured automatically from the running application by the
 
 ## Run
 
-Requires Node.js 20.9 or later and npm.
+Requires Node.js 22 and npm.
 
 ```sh
 cd manuscriptpilot
@@ -24,7 +24,7 @@ npm ci
 npm run dev
 ```
 
-Open the Local URL printed by Next.js. Run `npm test`, `npm run test:e2e`, and `npm run build` for checks. The browser suite uses Google Chrome at `/usr/bin/google-chrome`; override with `CHROME_PATH`. It captures screenshots and checks the exported DOCX. To test a deployed site in fresh browser contexts, run `PLAYWRIGHT_BASE_URL=https://your-site.vercel.app npm run test:e2e`. The browser stores one active project in localStorage. Creating or loading another replaces it; export the JSON backup first. Clearing browser storage deletes the project. JSON export is a backup only; import is not yet implemented.
+Open the Local URL printed by Next.js. Run `npm test`, `npm run test:e2e`, and `npm run build` for checks. The browser suite uses Google Chrome at `/usr/bin/google-chrome`; override with `CHROME_PATH`. It captures screenshots and checks the exported DOCX. To test a deployed site in fresh browser contexts, run `PLAYWRIGHT_BASE_URL=https://manuscript-pilot.vercel.app npm run test:e2e`. The browser stores one active project in localStorage. Creating or loading another replaces it; export the JSON backup first. Clearing browser storage deletes the project. JSON export is a backup only; import is not yet implemented.
 
 ## Demo and live AI
 
@@ -48,8 +48,13 @@ TXT and DOCX text can be imported; text-based PDF extraction is read-only and ma
 
 ## Public demo
 
-The public static demonstration is configured for [GitHub Pages](https://mmr000.github.io/ManuscriptPilot/). It uses synthetic data and requires no login or API key. The server-only AI feature is intentionally disabled in this deployment.
+The primary [public demo](https://manuscript-pilot.vercel.app/) uses synthetic data and requires no login or API key. Demo suggestions are predefined; checks are deterministic. The optional server-side live AI feature was not tested with a real credential.
 
 ## Deployment
 
-See [DEPLOYMENT.md](DEPLOYMENT.md). The GitHub Pages deployment uses a static demo build, without the server-side AI endpoint; live AI requires a server deployment. AI-assisted development is disclosed in [CONTRIBUTION_DECLARATION.md](CONTRIBUTION_DECLARATION.md).
+See [DEPLOYMENT.md](DEPLOYMENT.md). The Vercel deployment uses the server-backed Next.js build; without a key, live AI requests return an explicit error. AI-assisted development is disclosed in [CONTRIBUTION_DECLARATION.md](CONTRIBUTION_DECLARATION.md).
+
+
+## Competition submission
+
+See [the Russian passport and reviewer test](CODEX_CHALLENGE_SUBMISSION_RU.md). The repository does not yet contain the separately required presentation (up to two slides) or video (up to one minute). No project license has been declared; verify rights before reuse.
