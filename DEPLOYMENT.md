@@ -1,6 +1,6 @@
 # Public demo deployment
 
-GitHub Actions deploys a static demo to GitHub Pages from `main`. The static build removes the server API and hides live AI controls. The project also supports a standard server deployment on Vercel:
+GitHub Pages is configured to publish the `gh-pages` branch. The static build removes the server API and hides live AI controls. Build with `npm run build:pages`, then publish the contents of `out` to `gh-pages`; the optional Actions workflow can automate this if GitHub Actions is available. The project also supports a standard server deployment on Vercel:
 
 1. Push the `manuscriptpilot` directory to a new repository under your control. Do not commit `.env.local` or real manuscripts.
 2. Import the repository into Vercel, select Next.js and set the root directory to `manuscriptpilot` if the repository contains a parent directory. Use `npm ci` and `npm run build` (Vercel defaults are normally sufficient).
