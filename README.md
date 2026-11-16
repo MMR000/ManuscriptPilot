@@ -24,7 +24,7 @@ npm ci
 npm run dev
 ```
 
-Open the Local URL printed by Next.js. Run `npm test`, `npm run test:e2e`, and `npm run build` for checks. The browser suite uses Google Chrome at `/usr/bin/google-chrome`; override with `CHROME_PATH`. It captures screenshots and checks the exported DOCX. The browser stores one active project in localStorage. Creating or loading another replaces it; export the JSON backup first. Clearing browser storage deletes the project. JSON export is a backup only; import is not yet implemented.
+Open the Local URL printed by Next.js. Run `npm test`, `npm run test:e2e`, and `npm run build` for checks. The browser suite uses Google Chrome at `/usr/bin/google-chrome`; override with `CHROME_PATH`. It captures screenshots and checks the exported DOCX. To test a deployed site in fresh browser contexts, run `PLAYWRIGHT_BASE_URL=https://your-site.vercel.app npm run test:e2e`. The browser stores one active project in localStorage. Creating or loading another replaces it; export the JSON backup first. Clearing browser storage deletes the project. JSON export is a backup only; import is not yet implemented.
 
 ## Demo and live AI
 
